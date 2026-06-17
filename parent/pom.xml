@@ -37,7 +37,7 @@
         <maven-enforcer-plugin.version>3.6.3</maven-enforcer-plugin.version>
 
         <!-- Tooling plugins referenced from child modules -->
-        <frontend-maven-plugin.version>2.0.0</frontend-maven-plugin.version>
+        <frontend-maven-plugin.version>2.0.1</frontend-maven-plugin.version>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
         <protobuf-maven-plugin.version>4.1.1</protobuf-maven-plugin.version>
         <grpc.version>1.77.0</grpc.version>
