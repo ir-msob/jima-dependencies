@@ -36,7 +36,7 @@
         <google-guava.version>33.6.0-jre</google-guava.version>
         <reflections.version>0.10.2</reflections.version>
         <modelmapper.version>3.2.6</modelmapper.version>
-        <javaparser-core.version>3.28.1</javaparser-core.version>
+        <javaparser-core.version>3.28.2</javaparser-core.version>
         <google.auto.service.version>1.1.1</google.auto.service.version>
 
         <!-- Office -->
