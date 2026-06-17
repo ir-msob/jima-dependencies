@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ir.msob.jima.framework</groupId>
+    <artifactId>jima-dependencies</artifactId>
+    <version>2.0.0</version>
+    <packaging>pom</packaging>
+    <name>jima-dependencies</name>
+    <description>Jima dependencies Aggregator</description>
+    <url>http://www.msob.ir</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Jima</name>
+            <email>ask@msob.ir</email>
+            <organization>MSob</organization>
+            <organizationUrl>http://www.msob.ir</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/ir-msob/jima-dependencies.git</connection>
+        <developerConnection>scm:git:https://github.com/ir-msob/jima-dependencies.git</developerConnection>
+        <url>scm:git:https://github.com/ir-msob/jima-dependencies.git</url>
+    </scm>
+    <modules>
+        <module>bom</module>
+        <module>parent</module>
+    </modules>
+
+
+</project>

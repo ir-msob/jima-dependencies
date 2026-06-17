@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ir.msob.jima.framework</groupId>
+    <artifactId>jima-framework-bom</artifactId>
+    <version>2.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>jima-framework-bom</name>
+    <description>Bill of Materials for the Jima framework. It centralizes dependency versions across framework
+        modules.
+    </description>
+
+    <properties>
+        <!-- Platform -->
+        <spring-boot.version>4.0.6</spring-boot.version>
+        <spring-cloud.version>2025.1.1</spring-cloud.version>
+        <spring-ai.version>2.0.0-M6</spring-ai.version>
+        <spring-grpc.version>1.0.3</spring-grpc.version>
+
+        <!-- Security -->
+        <jjwt.version>0.13.0</jjwt.version>
+
+        <!-- Data / Cache -->
+        <redisson.version>4.4.0</redisson.version>
+        <redisson-spring-boot-starter.version>4.4.0</redisson-spring-boot-starter.version>
+        <hibernate-reactive-core.version>4.3.5.Final</hibernate-reactive-core.version>
+
+        <!-- JSON / Utility -->
+        <json-patch.version>1.9</json-patch.version>
+        <json.version>20260522</json.version>
+        <apache-commons-io.version>2.22.0</apache-commons-io.version>
+        <google-guava.version>33.6.0-jre</google-guava.version>
+        <reflections.version>0.10.2</reflections.version>
+        <modelmapper.version>3.2.6</modelmapper.version>
+        <javaparser-core.version>3.28.1</javaparser-core.version>
+        <google.auto.service.version>1.1.1</google.auto.service.version>
+
+        <!-- Office -->
+        <apache-poi.version>5.5.1</apache-poi.version>
+        <spring-batch-excel.version>0.2.0</spring-batch-excel.version>
+
+        <!-- Resource / Storage / Docs -->
+        <minio.version>9.0.1</minio.version>
+        <s3.version>2.44.12</s3.version>
+        <bootstrap.version>5.3.8</bootstrap.version>
+        <webjars-locator.version>0.52</webjars-locator.version>
+        <tika.version>3.3.0</tika.version>
+        <springdoc-openapi-starter-webflux-ui.version>3.0.3</springdoc-openapi-starter-webflux-ui.version>
+
+        <!-- Process Engine -->
+        <activiti.version>7.1.0.M6</activiti.version>
+        <camunda-client-java.version>8.9.5</camunda-client-java.version>
+        <spring-boot-starter-camunda-sdk.version>8.9.5</spring-boot-starter-camunda-sdk.version>
+
+        <!-- Testing -->
+        <testcontainers.version>2.0.5</testcontainers.version>
+        <testcontainers-keycloak.version>4.2.1</testcontainers-keycloak.version>
+        <spring-web-test-client.version>6.0.0</spring-web-test-client.version>
+
+        <!-- Maven APIs used by internal framework plugins/modules -->
+        <maven.version>3.9.15</maven.version>
+        <maven-plugin-annotations.version>3.15.2</maven-plugin-annotations.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Platform BOMs -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring-ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.grpc</groupId>
+                <artifactId>spring-grpc-dependencies</artifactId>
+                <version>${spring-grpc.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Security -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jjwt.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!-- Core utilities -->
+            <dependency>
+                <groupId>org.modelmapper</groupId>
+                <artifactId>modelmapper</artifactId>
+                <version>${modelmapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.fge</groupId>
+                <artifactId>json-patch</artifactId>
+                <version>${json-patch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${apache-commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${json.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-core</artifactId>
+                <version>${tika.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parsers-standard-package</artifactId>
+                <version>${tika.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.javaparser</groupId>
+                <artifactId>javaparser-core</artifactId>
+                <version>${javaparser-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.auto.service</groupId>
+                <artifactId>auto-service</artifactId>
+                <version>${google.auto.service.version}</version>
+            </dependency>
+
+            <!-- Office -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${apache-poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${apache-poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.batch.extensions</groupId>
+                <artifactId>spring-batch-excel</artifactId>
+                <version>${spring-batch-excel.version}</version>
+            </dependency>
+
+            <!-- Build / Maven APIs -->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${maven-plugin-annotations.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-model-builder</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-model</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
+
+            <!-- Testing -->
+            <dependency>
+                <groupId>com.github.dasniko</groupId>
+                <artifactId>testcontainers-keycloak</artifactId>
+                <version>${testcontainers-keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>spring-web-test-client</artifactId>
+                <version>${spring-web-test-client.version}</version>
+            </dependency>
+
+            <!-- Data / Cache -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.reactive</groupId>
+                <artifactId>hibernate-reactive-core</artifactId>
+                <version>${hibernate-reactive-core.version}</version>
+            </dependency>
+
+            <!-- Storage / Cloud -->
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>s3</artifactId>
+                <version>${s3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>netty-nio-client</artifactId>
+                <version>${s3.version}</version>
+            </dependency>
+
+            <!-- Process engine -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-spring-boot-starter</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.camunda</groupId>
+                <artifactId>camunda-client-java</artifactId>
+                <version>${camunda-client-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.camunda</groupId>
+                <artifactId>spring-boot-starter-camunda-sdk</artifactId>
+                <version>${spring-boot-starter-camunda-sdk.version}</version>
+            </dependency>
+
+            <!-- Web / UI / Docs -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${google-guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>${bootstrap.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>webjars-locator</artifactId>
+                <version>${webjars-locator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
+                <version>${springdoc-openapi-starter-webflux-ui.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
