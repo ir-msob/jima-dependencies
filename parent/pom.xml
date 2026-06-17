@@ -54,7 +54,7 @@
         <maven-model.version>3.9.15</maven-model.version>
 
         <!-- Code Coverage Tools -->
-        <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.15</jacoco-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
