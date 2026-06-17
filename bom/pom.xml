@@ -45,7 +45,7 @@
 
         <!-- Resource / Storage / Docs -->
         <minio.version>9.0.1</minio.version>
-        <s3.version>2.44.12</s3.version>
+        <s3.version>2.46.12</s3.version>
         <bootstrap.version>5.3.8</bootstrap.version>
         <webjars-locator.version>0.52</webjars-locator.version>
         <tika.version>3.3.1</tika.version>
