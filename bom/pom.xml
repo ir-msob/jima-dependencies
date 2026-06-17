@@ -26,8 +26,8 @@
 
         <!-- Data / Cache -->
         <redisson.version>4.6.0</redisson.version>
-        <redisson-spring-boot-starter.version>4.4.0</redisson-spring-boot-starter.version>
         <hibernate-reactive-core.version>4.4.1.Final</hibernate-reactive-core.version>
+        <redisson-spring-boot-starter.version>4.6.0</redisson-spring-boot-starter.version>
 
         <!-- JSON / Utility -->
         <json-patch.version>1.9</json-patch.version>
@@ -45,7 +45,7 @@
 
         <!-- Resource / Storage / Docs -->
         <minio.version>9.0.1</minio.version>
-        <s3.version>2.44.12</s3.version>
+        <s3.version>2.46.12</s3.version>
         <bootstrap.version>5.3.8</bootstrap.version>
         <webjars-locator.version>0.52</webjars-locator.version>
         <tika.version>3.3.1</tika.version>
@@ -54,7 +54,7 @@
         <!-- Process Engine -->
         <activiti.version>7.1.0.M6</activiti.version>
         <camunda-client-java.version>8.9.5</camunda-client-java.version>
-        <spring-boot-starter-camunda-sdk.version>8.9.5</spring-boot-starter-camunda-sdk.version>
+        <spring-boot-starter-camunda-sdk.version>8.9.9</spring-boot-starter-camunda-sdk.version>
 
         <!-- Testing -->
         <testcontainers.version>2.0.5</testcontainers.version>
