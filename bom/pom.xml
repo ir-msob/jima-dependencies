@@ -41,7 +41,7 @@
 
         <!-- Office -->
         <apache-poi.version>5.5.1</apache-poi.version>
-        <spring-batch-excel.version>0.2.0</spring-batch-excel.version>
+        <spring-batch-excel.version>0.3.0</spring-batch-excel.version>
 
         <!-- Resource / Storage / Docs -->
         <minio.version>9.0.3</minio.version>
