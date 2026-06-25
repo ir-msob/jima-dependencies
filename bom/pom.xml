@@ -26,7 +26,7 @@
 
         <!-- Data / Cache -->
         <redisson.version>4.6.1</redisson.version>
-        <hibernate-reactive-core.version>4.4.1.Final</hibernate-reactive-core.version>
+        <hibernate-reactive-core.version>4.5.0.Final</hibernate-reactive-core.version>
         <redisson-spring-boot-starter.version>4.6.0</redisson-spring-boot-starter.version>
 
         <!-- JSON / Utility -->
