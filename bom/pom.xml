@@ -25,9 +25,9 @@
         <jjwt.version>0.13.0</jjwt.version>
 
         <!-- Data / Cache -->
-        <redisson.version>4.6.0</redisson.version>
-        <hibernate-reactive-core.version>4.4.1.Final</hibernate-reactive-core.version>
         <redisson-spring-boot-starter.version>4.6.1</redisson-spring-boot-starter.version>
+        <redisson.version>4.6.1</redisson.version>
+        <hibernate-reactive-core.version>4.5.0.Final</hibernate-reactive-core.version>
 
         <!-- JSON / Utility -->
         <json-patch.version>1.9</json-patch.version>
