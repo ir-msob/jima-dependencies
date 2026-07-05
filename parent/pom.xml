@@ -170,6 +170,8 @@
                     <useModulePath>false</useModulePath>
                     <includes>
                         <include>**/*Test.java</include>
+                        <include>**/*Tests.java</include>
+                        <include>**/*TestCase.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -208,7 +210,7 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>prepare-package</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
